@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfólio - Clayver Alexssander</title>
+  <link rel="stylesheet" href="style/index.css" />
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Estrelas (JS cria as .star) -->
+  <div class="stars" id="stars"></div>
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/clayver-alexssander" 
+          target="_blank" 
+          title="LinkedIn" 
+          class="ext-link" 
+          data-platform="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/clayalexssander" 
+          target="_blank" 
+          title="GitHub" 
+          class="ext-link" 
+          data-platform="GitHub">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+        </a>
+      </li>
+      <li>
+        <button id="copy-email" type="button" title="Clique para copiar e-mail">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="E-mail">
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="layout">
+    <div class="left">
+      <div class="profile-img">
+        <img src="imagens/foto.png" alt="Foto Clayver Alexssander">
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="title-box">
+        <h1>Desenvolvedor Full Stack</h1>
+      </div>
+
+      <div class="about" aria-labelledby="about-title">
+        <h2 id="about-title">Quem sou eu</h2>
+        <p>Sou <b>Clayver Alexssander</b>, um desenvolvedor de software apaixonado por transformar linhas de código em soluções reais. Tenho experiência prática em 
+          <span class="keyword">C#</span>, 
+          <span class="keyword">MySQL avançado</span>, 
+          <span class="keyword">Python</span>, 
+          <span class="keyword">HTML</span>, 
+          <span class="keyword">CSS</span> e 
+          <span class="keyword">JavaScript</span>.  
+          Meu foco está em <span class="keyword">backend</span> e <span class="keyword">integrações</span>, mas também crio projetos <span class="keyword">full stack</span>.
+        </p>
+
+        <h2>O que eu faço</h2>
+        <p>Eu pego ideias e transformo em sistemas vivos. Minhas especialidades incluem 
+          <span class="keyword">modelagem de dados</span>, 
+          <span class="keyword">integração de APIs</span> e 
+          <span class="keyword">automação de processos</span>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- FIM LAYOUT PRINCIPAL -->
+
+  <!-- SEÇÃO PROJETOS -->
+  <section class="projects-container">
+    <div class="projects-header">
+      <h1 class="projects-title">Meus Projetos</h1>
+      <p class="projects-subtitle">Transformando ideias em soluções digitais inovadoras.</p>
+    </div>
+    
+    <div class="cards-carousel">
+      <!-- Note: cada link tem data-project para identificar -->
+      <div class="project-card card-ecofinder card-4">
+        <div class="light-beam"></div>
+        <div class="project-image"><i>♻️</i></div>
+        <h2 class="project-title">Ecofinder</h2>
+        <span class="project-category">Foco Sustentável</span>
+        <p class="project-description">Sistema inteligente para localização de pontos de reciclagem.</p>
+        <a href="#" class="project-link" data-project="ecofinder">Ver Detalhes</a>
+      </div>
+      
+      <div class="project-card card-marmitas card-2">
+        <div class="light-beam"></div>
+        <div class="project-image"><i>🍲</i></div>
+        <h2 class="project-title">Distribuição de Marmitas</h2>
+        <span class="project-category">Foco Social</span>
+        <p class="project-description">Plataforma para otimização da distribuição de alimentos.</p>
+        <a href="#" class="project-link" data-project="marmitas">Ver Detalhes</a>
+      </div>
+      
+      <div class="project-card card-agede card-3">
+        <div class="light-beam"></div>
+        <div class="project-image"><i>🦟</i></div>
+        <h2 class="project-title">Agede</h2>
+        <span class="project-category">Saúde Pública</span>
+        <p class="project-description">Sistema de monitoramento e combate à dengue.</p>
+        <a href="#" class="project-link" data-project="agede">Ver Detalhes</a>
+      </div>
+      
+      <div class="project-card card-microcalc card-1">
+        <div class="light-beam"></div>
+        <div class="project-image"><i>💊</i></div>
+        <h2 class="project-title">Microcalc</h2>
+        <span class="project-category">Saúde Pública</span>
+        <p class="project-description">Ferramenta para cálculos de dosagem medicamentosa.</p>
+        <a href="#" class="project-link" data-project="microcalc">Ver Detalhes</a>
+      </div>
+      
+      <div class="project-card card-thetower card-5">
+        <div class="light-beam"></div>
+        <div class="project-image"><i>🏫</i></div>
+        <h2 class="project-title">TheTower</h2>
+        <span class="project-category">Educação</span>
+        <p class="project-description">Sistema completo de gestão educacional.</p>
+        <a href="#" class="project-link" data-project="thetower">Ver Detalhes</a>
+      </div>
+    </div>
+  </section>
+  <!-- FIM SEÇÃO PROJETOS -->
+
+<!-- TELA DE DETALHE DO PROJETO (inicialmente oculta) -->
+<div id="project-detail" class="project-detail hidden" aria-hidden="true">
+
+  <!-- Carrossel ocupa metade superior -->
+  <div class="detail-carousel">
+    <!-- Nome sobreposto -->
+    <div class="detail-name-box">
+      <h2 id="detail-title">Nome do Projeto</h2>
+    </div>
+
+    <button id="carousel-prev" class="carousel-btn">‹</button>
+    <div class="carousel-frame">
+      <img id="carousel-image" src="" alt="Imagem do projeto">
+      <div class="carousel-caption" id="carousel-caption"></div>
+    </div>
+    <button id="carousel-next" class="carousel-btn">›</button>
+  </div>
+
+  <!-- Degradê de transição -->
+  <div class="detail-transition"></div>
+
+  <!-- Infos do projeto -->
+  <div class="detail-infos">
+    <div class="detail-box detail-description">
+      <h3>Descrição</h3>
+      <p id="detail-description"></p>
+    </div>
+
+    <div class="detail-box detail-techs">
+      <h3>Tecnologias usadas</h3>
+      <div id="detail-techs" class="tech-list"></div>
+    </div>
+
+    <div class="detail-box detail-collab">
+      <h3>Colaborações</h3>
+      <ul id="detail-collabs" class="collab-list"></ul>
+    </div>
+  </div>
+
+  <div class="detail-actions">
+    <a id="detail-link" href="#" target="_blank" class="project-link">Acessar Projeto</a>
+    <button id="back-button" class="back-button" aria-label="Voltar">← Voltar</button>
+  </div>
+</div>
+
+  <script src="behave/index.js"></script>
+</body>
+</html>
