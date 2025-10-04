@@ -746,7 +746,7 @@
     0 0 14px rgba(0,0,0,0.6); /* brilho mais sutil */
 }
 .carousel-btn {
-  position: absolute;   /* agora absolutos dentro do carrossel */
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(255,255,255,0.1);
@@ -760,16 +760,20 @@
   color: currentColor;
   transition: 0.3s;
   z-index: 5;
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
 }
 
-/* Esquerda */
 #carousel-prev {
-  left: 20px; /* distância da borda esquerda */
+  left: 10px;
 }
 
-/* Direita */
 #carousel-next {
-  right: 20px; /* distância da borda direita */
+  right: 110px;
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .carousel-btn:hover {

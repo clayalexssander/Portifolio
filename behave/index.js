@@ -76,14 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
     marmitas: {
       titulo: "Distribuição de Marmitas",
       cor: "#ff7300",
-      descricao: "Plataforma que organiza pontos de distribuição, controlando doações, rotas e beneficiários com relatórios de impacto social.",
+      descricao: "Site para análise da distribuição de marmitas. Transforma planilhas CSV em estatísticas rápidas, tabelas e gráficos interativos para iniciativas comunitárias.",
       link: "https://clayalexssander.github.io/AnliseDeDistribuicaoDeMarmitas/",
-      techs: ["Node.js", "Express", "MySQL", "Bootstrap"],
-      collabs: ["ONG X", "Restaurante Parceiro Y"],
+      techs: ["HTML5", "CSS3", "JavaScript"],
+      collabs: ["Igreja local"],
       images: [
         "/imagens/DistribuicaoMarmitas/Dm1.png",
-        "/imagens/DistribuicaoMarmitas/Dm2.png",
-        "/imagens/DistribuicaoMarmitas/Dm3.png"
+        "/imagens/DistribuicaoMarmitas/Dm2.png"
       ]
     },
     agede: {
@@ -102,15 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
     microcalc: {
       titulo: "Microcalc",
       cor: "#45cece",
-      descricao: "Ferramenta para cálculos de dosagem medicamentosa com base em parâmetros clínicos e checagens de segurança.",
+      descricao: "O Microcalc é um site responsivo que permite ao usuário estimar sua ingestão diária e semanal de microplásticos com base em hábitos pessoais.",
       link: "https://clayalexssander.github.io/Microcalc/",
-      techs: ["JavaScript", "React", "Material UI"],
-      collabs: ["Profissionais de saúde (consultoria)"],
+      techs: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      collabs: ["Orientado por professores"],
       images: [
         "/imagens/microcalc/Mc1.png",
-        "/imagens/microcalc/Mc2.png",
-        "/imagens/microcalc/Mc3.png",
-        "/imagens/microcalc/Mc4.png"
+        "/imagens/microcalc/Mc3.png"
       ]
     },
     thetower: {
