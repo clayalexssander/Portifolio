@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
       techs: ["HTML5", "CSS3", "JavaScript"],
       collabs: ["Igreja local"],
       images: [
-        "/imagens/DistribuicaoMarmitas/Dm1.png",
-        "/imagens/DistribuicaoMarmitas/Dm2.png"
+        "imagens/DistribuicaoMarmitas/Dm1.png",
+        "imagens/DistribuicaoMarmitas/Dm2.png"
       ]
     },
     agede: {
@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
       techs: ["HTML", "CSS", "JavaScript", "Bootstrap"],
       collabs: ["Orientado por professores"],
       images: [
-        "/imagens/microcalc/Mc1.png",
-        "/imagens/microcalc/Mc3.png"
+        "imagens/microcalc/Mc1.png",
+        "imagens/microcalc/Mc3.png"
       ]
     },
     thetower: {
