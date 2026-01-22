@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       titulo: "Ecofinder",
       cor: "#00ff00",
       descricao: "Sistema inteligente para localização de pontos de reciclagem, com geolocalização, rota otimizada e painel administrativo para monitoramento de coletas.",
-      link: "https://seu-projeto-ecofinder.com",
+      link: "https://github.com/matheuscostar77/EcoFinder_v2",
       techs: ["C#", "MySQL", "Leaflet", "API REST"],
       collabs: ["Prefeitura Municipal", "Voluntários locais"],
       images: [
@@ -111,10 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     thetower: {
-      titulo: "TheTower",
+      titulo: "TheTowerProject",
       cor: "#2020e2",
       descricao: "Sistema de gestão educacional com controle de notas, matrículas e painel para professores e alunos.",
-      link: "https://seu-projeto-thetower.com",
+      link: "https://clayalexssander.github.io/TheTowerProject/landingpage/sistema.html",
       techs: ["C#", ".NET", "MySQL", "Angular"],
       collabs: ["Instituição de Ensino local"],
       images: [
