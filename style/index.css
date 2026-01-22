@@ -1,5 +1,4 @@
- 
-  :root{
+:root{
     --bg1: #07070a;
     --bg2: #000;
     --neon-purple: #9333ea;
@@ -11,9 +10,14 @@
   html,body{height:100%}
   body {
   font-family: "Poppins", system-ui, sans-serif;
-  background-color: #000000;  color: var(--text);
+  background-color: #000000;
+  color: var(--text);
   padding:36px;
-  overflow-x:hidden; /* só bloqueia scroll lateral */
+  overflow-x:hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 
@@ -38,21 +42,21 @@
     display:flex;
     gap:40px;
     width:100%;
-    max-width:1250px;
-    align-items:flex-start; /* alinha topo, conforme seu esboço */
+    max-width:1200px;
+    align-items:flex-start;
     z-index:1;
+    margin: 0 auto 100px auto; /* Centraliza e dá espaço para a próxima seção */
   }
 
   /* ESQUERDA: FOTO grande, fixa */
   .left{
-    flex: 0 0 520px;          /* largura fixa da coluna da foto */
+    flex: 0 0 520px;
     display:flex;
-    align-items:flex-start;   /* começa no topo da coluna */
+    align-items:flex-start;
   }
 
   .profile-img{
     width:100%;
-    /* mantém a foto na mesma posição e evita redimensionamento pelo flex */
     flex-shrink:0;
     transform-origin:center;
     animation: float 8s ease-in-out infinite;
@@ -64,7 +68,6 @@
     width:500px;
     height:auto;
     border-radius:10px;
-    /* efeito de borda/neon direto na imagem */
     filter:
       drop-shadow(0 0 8px rgba(147,51,234,0.6))
       drop-shadow(0 0 18px rgba(125,211,252,0.12))
@@ -79,21 +82,20 @@
 
   /* DIREITA: coluna com título em cima e about embaixo */
   .right{
-    flex: 0 0 520px;         /* largura fixa para manter layout proporcional */
+    flex: 0 0 520px;
     display:flex;
     flex-direction:column;
-    gap:22px;                /* distância entre title box e about box */
+    gap:22px;
     align-items:stretch;
-     margin-top: 60px;
+    margin-top: 60px;
   }
 
   /* Caixa do título — retângulo como no seu rascunho */
   .title-box{
-    height:120px;            /* altura fixa: evita que o about suba/baixe */
+    height:120px;
     display:flex;
     align-items:center;
     padding: 0 22px;
-     /* sem sombra, sem fundo sólido — só a moldura */
     background:transparent;
   }
 
@@ -101,30 +103,27 @@
     font-family:"Orbitron", sans-serif;
     font-weight:900;
     letter-spacing:4px;
-    font-size:42px; /* ajuste aqui se quiser maior/menor */
+    font-size:42px;
     color:#fff;
     margin:0;
     text-transform:capitalize;
-    /* efeito neon no texto */
     text-shadow:
       0 0 6px rgba(147,51,234,0.9),
       0 0 14px rgba(125,211,252,0.35),
       0 0 30px rgba(147,51,234,0.4);
     transform-origin:left center;
-    /* permite aumentar visual sem mexer layout (não altera tamanho de caixa) */
     transform: scale(1.4);
   }
 
   /* Caixa do about: sem fundo, sem sombra, apenas borda-left */
   .about{
     padding: 8px 30px;
-    border-left: 4px solid var(--neon-purple); /* sua borda desejada */
+    border-left: 4px solid var(--neon-purple);
     max-width:100%;
-    /* torna o conteúdo compacto e evita overflow lateral */
     font-size:15px;
     line-height:1.55;
     color:#e7e7e7;
-    background:transparent; /* sem bg */
+    background:transparent;
   }
 
   .about h2{
@@ -154,7 +153,7 @@
 
   .keyword {
   font-weight: 700;
-  color: #981ddf; /* azul neon */
+  color: #981ddf;
   text-shadow:
     0 0 5px #ad72cf,
     0 0 10px #7f3ac0,
@@ -185,7 +184,7 @@
 .sidebar {
   position: fixed;
   top: 20px;
-  right: 20px;  /* 🔥 sempre ficará no canto direito, independente do tamanho da tela */
+  right: 20px;
   background: rgba(15, 15, 20, 0.85);
   border: 1px solid var(--neon-purple);
   border-radius: 12px;
@@ -203,7 +202,7 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 12px;   /* controla a distância horizontal */
+  gap: 12px;
   padding: 0;
   margin: 0;
 }
@@ -233,7 +232,7 @@
 #copy-email:hover::after {
   content: attr(title);
   position: absolute;
-  bottom: 45px;        /* aparece acima do ícone */
+  bottom: 45px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--neon-purple);
@@ -293,17 +292,19 @@
 .projects-container {
     position: relative;
     width: 100%;
-    max-width: 1600px;
+    max-width: 1200px;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
 .projects-header {
     margin-bottom: 3rem;
     text-align: center;
     z-index: 10;
+    width: 100%;
 }
 
 .projects-title {
@@ -331,6 +332,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -536,7 +538,7 @@
     pointer-events: none;
 }
 
-/* Responsividade */
+/* Responsividade para telas menores - MANTIDA */
 @media (max-width: 1600px) {
     .card-1 {
         transform: translateX(-420px) scale(0.9);
@@ -556,6 +558,11 @@
 }
 
 @media (max-width: 1400px) {
+    .layout,
+    .projects-container {
+        max-width: 1100px;
+    }
+    
     .card-1 {
         transform: translateX(-360px) scale(0.9);
     }
@@ -574,6 +581,11 @@
 }   
 
 @media (max-width: 1200px) {
+    .layout,
+    .projects-container {
+        max-width: 1000px;
+    }
+    
     .project-card {
         width: 280px;
         height: 380px;
@@ -664,9 +676,11 @@
     }
 }
 
-/* -------- TELA DE DETALHE (estilo inspirado no seu rascunho) -------- */
+/* -------- TELA DE DETALHE (PERFEITA - NÃO MEXER) -------- */
 .project-detail {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -676,6 +690,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  z-index: 1000;
 }
 .hidden { display: none !important; }
 .back-button {
@@ -687,7 +702,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
-  margin-left: 10px; /* espaço entre os botões */
+  margin-left: 10px;
 }
 .back-button:hover {
   background: currentColor;
@@ -706,12 +721,12 @@
   
 }
 .carousel-frame {
-  position: absolute;       /* cobre tudo */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;               /* fica por trás dos botões */
+  z-index: 0;
 }
 .carousel-frame img {
   width:100%;
@@ -738,12 +753,12 @@
 }
 .detail-name-box h2 {
   font-family: "Orbitron", sans-serif;
-  font-size: 2.6rem;  /* maior para destaque */
+  font-size: 2.6rem;
   font-weight: 900;
   color: inherit;
   text-shadow:
     0 0 6px currentColor,
-    0 0 14px rgba(0,0,0,0.6); /* brilho mais sutil */
+    0 0 14px rgba(0,0,0,0.6);
 }
 .carousel-btn {
   position: absolute;
@@ -784,8 +799,8 @@
 
 .detail-transition {
   position: relative;
-  height: 120px; /* altura do degradê */
-  margin-top: -120px; /* puxa para cima dentro do carrossel */
+  height: 120px;
+  margin-top: -120px;
   z-index: 1;
 }
 
@@ -857,7 +872,7 @@
   text-align: right;
   display: flex;
   justify-content: flex-end;
-  gap: 10px; /* espaço entre os botões */
+  gap: 10px;
 }
 .detail-actions .project-link {
   display: inline-block;
@@ -876,6 +891,105 @@
   color: #000;
   border-color: #fff;
   box-shadow: 0 0 25px #fff;
+}
+
+/* ========== CORREÇÕES PARA TELAS GRANDES ========== */
+
+/* Para telas MUITO grandes (acima de 1600px) */
+@media (min-width: 1601px) {
+  body {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .layout {
+    max-width: 1200px;
+  }
+  
+  .projects-container {
+    max-width: 1200px;
+  }
+  
+  .cards-carousel {
+    max-width: 1200px;
+  }
+  
+  /* Ajusta o espaçamento dos cards proporcionalmente */
+  .card-1 {
+    transform: translateX(-480px) scale(0.9);
+  }
+  
+  .card-2 {
+    transform: translateX(-240px) scale(0.95);
+  }
+  
+  .card-3 {
+    transform: translateX(0) scale(1.07);
+  }
+  
+  .card-4 {
+    transform: translateX(240px) scale(0.95);
+  }
+  
+  .card-5 {
+    transform: translateX(480px) scale(0.9);
+  }
+}
+
+/* Para telas EXTREMAMENTE grandes (acima de 2000px) */
+@media (min-width: 2001px) {
+  body {
+    max-width: 1800px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .layout {
+    max-width: 1400px;
+  }
+  
+  .projects-container {
+    max-width: 1400px;
+  }
+  
+  .cards-carousel {
+    max-width: 1400px;
+  }
+  
+  /* Ajusta o espaçamento dos cards proporcionalmente */
+  .card-1 {
+    transform: translateX(-550px) scale(0.9);
+  }
+  
+  .card-2 {
+    transform: translateX(-275px) scale(0.95);
+  }
+  
+  .card-3 {
+    transform: translateX(0) scale(1.07);
+  }
+  
+  .card-4 {
+    transform: translateX(275px) scale(0.95);
+  }
+  
+  .card-5 {
+    transform: translateX(550px) scale(0.9);
+  }
+}
+
+/* Para telas MÉDIAS (entre 1201px e 1600px) - ajuste padrão */
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .layout,
+  .projects-container {
+    max-width: 1100px;
+  }
+  
+  .cards-carousel {
+    max-width: 1100px;
+  }
 }
 
 @media (max-width: 950px) {
